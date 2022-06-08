@@ -1,7 +1,7 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="/">
+            <a href="{{ asset('image/prof.webp') }}">
                 <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
             </a>
         </x-slot>
@@ -14,6 +14,14 @@
 
         <form method="POST" action="{{ route('login') }}">
             @csrf
+
+            <!-- Name -->
+            <div>
+                <x-label for="name" :value="__('Name')" />
+
+                <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
+            </div>
+
 
             <!-- Email Address -->
             <div>
@@ -47,8 +55,9 @@
                     </a>
                 @endif
 
-                <x-button class="ml-3">
-                    {{ __('Log in') }}
+
+                <x-button class="ml-3 bg-green-600">
+                    {{ __('Connecter') }}
                 </x-button>
             </div>
         </form>

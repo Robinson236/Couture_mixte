@@ -14,7 +14,7 @@ class ClientController extends Controller
      */
     public function index()
     {
-        return view('liste', [
+        return view('client.liste_client', [
             'clients' => Client::all()
         ]);
     }
@@ -26,7 +26,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        return view('client');
+        //
     }
 
     /**

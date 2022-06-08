@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-
-<link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.min.css') }}">
-<link rel="stylesheet" href="{{ asset('bootstrap/css/bootstrap.css') }}">
-
 <body>
- <x-guest-layout>
+    <x-guest-layout>
         <x-auth-card>
             <x-slot name="logo">
                 <a href="/">
@@ -27,7 +15,6 @@
 
             <form method="POST" action="{{ route('login') }}">
                 @csrf
-
                 <!-- Email Address -->
                 <div>
                     <x-label for="email" :value="__('Email')" />
@@ -39,10 +26,7 @@
                 <div class="mt-4">
                     <x-label for="password" :value="__('Password')" />
 
-                    <x-input id="password" class="block mt-1 w-full"
-                                    type="password"
-                                    name="password"
-                                    required autocomplete="current-password" />
+                    <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
                 </div>
 
                 <!-- Remember Me -->
@@ -55,18 +39,18 @@
 
                 <div class="flex items-center justify-end mt-4">
                     @if (Route::has('password.request'))
-                        <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
-                            {{ __('Forgot your password?') }}
-                        </a>
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                        {{ __('Mot de passe oublié?') }}
+                    </a>
                     @endif
 
-                    <x-button class="ml-3">
-                        {{ __('Log in') }}
+                    <x-button class="ml-3 bg-green-600">
+                        {{ __('Connecter') }}
                     </x-button>
                 </div>
             </form>
+            <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
+                {{ __('Créer un compte') }}
+            </a>
         </x-auth-card>
     </x-guest-layout>
-
-</body>
-</html>
