@@ -20,7 +20,6 @@ class CreatePaiementsTable extends Migration
             $table->integer('reste');
             $table->foreign('clients_id')->unsigned();
             $table->foreign('clients_id')->references('id')->on('clients')->delete('update');
-            $table->foreign('modeles_id')->references('id')->on('modeles')->delete('update');
             $table->timestamps();
         });
     }

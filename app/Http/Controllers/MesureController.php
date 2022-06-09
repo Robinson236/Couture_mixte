@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Client;
 use Illuminate\Http\Request;
 
-class ClientController extends Controller
+class MesureController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,9 +13,7 @@ class ClientController extends Controller
      */
     public function index()
     {
-        return view('client.liste_client', [
-            'clients' => Client::all()
-        ]);
+        //
     }
 
     /**
@@ -26,7 +23,7 @@ class ClientController extends Controller
      */
     public function create()
     {
-        return view('client.formulaire');
+        //
     }
 
     /**
@@ -37,15 +34,7 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        Client::create([
-            'id' => $request->id,
-            'nom' => $request->nom,
-            'prenom' => $request->prenom,
-            'telephone' => $request->telephone,
-            'adresse' => $request->adresse,
-            'email' => $request->email,
-        ]);
-        return redirect()->route('gestion_client.index');
+        //
     }
 
     /**
