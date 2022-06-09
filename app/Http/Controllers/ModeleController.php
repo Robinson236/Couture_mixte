@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Modele;
 use Illuminate\Http\Request;
 
 class ModeleController extends Controller
@@ -13,7 +14,9 @@ class ModeleController extends Controller
      */
     public function index()
     {
-        //
+        return view('modele.liste_modele', [
+            'modeles' => Modele::all()
+        ]);
     }
 
     /**
@@ -23,7 +26,8 @@ class ModeleController extends Controller
      */
     public function create()
     {
-        //
+        return view('modele.formulaire');
+
     }
 
     /**
@@ -34,7 +38,12 @@ class ModeleController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Modele::create([
+            'id' => $request->id,
+            'nom' => $request->nom,
+            'photo' => $request->photo,
+        ]);
+        return redirect()->route('gestion_modele.index');
     }
 
     /**

@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ClientController;
+use App\Http\Controllers\MesureController;
+use App\Http\Controllers\ModeleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,4 +27,9 @@ Route::get('/dashboard', function () {
 require __DIR__.'/auth.php';
 
 Route::resource('gestion_client', ClientController::class);
+
+Route::resource('gestion_mesure', MesureController::class);
+
+Route::resource('gestion_modele', ModeleController::class);
+
 

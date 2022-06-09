@@ -31,8 +31,8 @@ class CreateMesuresTable extends Migration
             $table->decimal('longueur_milieu_dos');
             $table->decimal('longueur_entrejambe_sol');
             $table->decimal('carrure_devant');
-            $table->foreign('clients_id')->unsigned();
-            $table->unsignedBigInteger('clients_id')->references('id')->on('clients')->delete('update');
+            $table->unsignedBigInteger('clients_id')->unsigned();
+            $table->foreign('clients_id')->references('id')->on('clients')->delete('update');
             $table->timestamps();
         });
     }
