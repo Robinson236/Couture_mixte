@@ -10,37 +10,37 @@
                 <div class="row g-2">
                     <div class="col-6">
                         <label for="exampleInputEmail1" class="form-label">NOM</label>
-                        <input type="text" class="form-control" name="titre" id="exampleInputEmail1"
+                        <input type="text" class="form-control" name="nom" id="exampleInputEmail1"
                             aria-describedby="emailHelp">
                     </div>
                     <div class="col-6">
                         <label for="exampleInputEmail1" class="form-label">PRENOM</label>
-                        <input type="text" class="form-control" name="titre" id="exampleInputEmail1"
+                        <input type="text" class="form-control" name="prenom" id="exampleInputEmail1"
                             aria-describedby="emailHelp">
                     </div>
                     <div class="col-6">
                         <label for="exampleInputEmail1" class="form-label">TELEPHONE</label>
-                        <input type="number" class="form-control" name="titre" id="exampleInputEmail1"
+                        <input type="number" class="form-control" name="telephone" id="exampleInputEmail1"
                             aria-describedby="emailHelp">
                     </div>
                     <div class="col-6">
                         <label for="exampleInputEmail1" class="form-label">ADRESSE</label>
-                        <input type="email" class="form-control" name="titre" id="exampleInputEmail1"
+                        <input type="text" class="form-control" name="adresse" id="exampleInputEmail1"
                             aria-describedby="emailHelp">
                     </div>
-                    <div class="col-6">
+                    <div class="col-12">
                         <label for="exampleInputEmail1" class="form-label">EMAIL</label>
-                        <input type="email" class="form-control" name="titre" id="exampleInputEmail1"
+                        <input type="email" class="form-control" name="email" id="exampleInputEmail1"
                             aria-describedby="emailHelp">
                     </div>
                 </div>
             </div>
             <div class="container d-flex mt-3">
                 <div>
-                    <button type="submit" class="btn btn-info w-100">Enregistrer</button>
+                    <button type="submit" class="btn btn-outline-info w-100">Enregistrer</button>
                 </div> &nbsp;&nbsp;&nbsp;
                 <div>
-                    <button type="reset" class="btn btn-primary w-100">Annuler</button>
+                    <button type="reset" class="btn btn-outline-primary w-100">Annuler</button>
                 </div>
             </div>
         </form>

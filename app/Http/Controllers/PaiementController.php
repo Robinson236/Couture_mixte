@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
+use App\Models\Paiement;
 use Illuminate\Http\Request;
 
 class PaiementController extends Controller
@@ -13,7 +15,9 @@ class PaiementController extends Controller
      */
     public function index()
     {
-        //
+        return view('paiement.liste_paiement', [
+            'paiements' => Paiement::all()
+        ]);
     }
 
     /**
@@ -23,7 +27,9 @@ class PaiementController extends Controller
      */
     public function create()
     {
-        //
+        return view('paiement.formulaire', [
+            'clients' => Client::all(),
+        ]);
     }
 
     /**
@@ -34,7 +40,13 @@ class PaiementController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Paiement::create([
+            'id' => $request->id,
+            'total' => $request->total,
+            'avance' => $request->avance,
+            'reste' => $request->reste,
+        ]);
+        return redirect()->route('gestion_paiement.index');
     }
 
     /**
@@ -45,7 +57,9 @@ class PaiementController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('show', [
+            'finds' => Paiement::find($id),
+        ]);
     }
 
     /**
@@ -56,7 +70,9 @@ class PaiementController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('edit', [
+            'finds' => Paiement::find($id),
+        ]);
     }
 
     /**
@@ -68,7 +84,10 @@ class PaiementController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $paie = Paiement::find($id);
+        $paie->update($request->all());
+
+        return redirect()->route('gestion_paiement.index');
     }
 
     /**
@@ -79,6 +98,9 @@ class PaiementController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $paie = Paiement::find($id);
+        $paie->delete();
+
+        return redirect()->route('gestion_paiement.index');
     }
 }

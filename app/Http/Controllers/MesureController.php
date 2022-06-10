@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
 use App\Models\Mesure;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,9 @@ class MesureController extends Controller
      */
     public function create()
     {
-        return view('mesure.formulaire');
+        return view('mesure.formulaire', [
+            'clients' => Client::all()
+        ]);
     }
 
     /**
@@ -39,7 +42,7 @@ class MesureController extends Controller
     {
 
         Mesure::create([
-            'id' => $request->id,
+            'clients_id' => $request->clients_id,
             'tour_poitrine' => $request->tour_poitrine,
             'tour_manche' => $request->tour_manche,
             'tour_cuisse' => $request->tour_cuisse,
@@ -68,7 +71,9 @@ class MesureController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('show', [
+            'finds' => Mesure::find($id),
+        ]);
     }
 
     /**
@@ -79,7 +84,9 @@ class MesureController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('edit', [
+            'finds' => Mesure::find($id),
+        ]);
     }
 
     /**
@@ -91,7 +98,10 @@ class MesureController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $mesure = Mesure::find($id);
+        $mesure->update($request->all());
+
+        return redirect()->route('gestion_mesure.index');
     }
 
     /**
@@ -102,6 +112,9 @@ class MesureController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $mesure = Mesure::find($id);
+        $mesure->delete();
+
+        return redirect()->route('gestion_mesure.index');
     }
 }

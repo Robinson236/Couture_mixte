@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Client;
 use App\Models\Modele;
 use Illuminate\Http\Request;
 
@@ -26,7 +27,9 @@ class ModeleController extends Controller
      */
     public function create()
     {
-        return view('modele.formulaire');
+        return view('modele.formulaire', [
+            'clients' => Client::all(),
+        ]);
 
     }
 
@@ -54,7 +57,9 @@ class ModeleController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('show', [
+            'finds' => Modele::find($id),
+        ]);
     }
 
     /**
@@ -65,7 +70,9 @@ class ModeleController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('edit', [
+            'finds' => Modele::find($id),
+        ]);
     }
 
     /**
@@ -77,7 +84,10 @@ class ModeleController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $mod = Modele::find($id);
+        $mod->update($request->all());
+
+        return redirect()->route('gestion_modele.index');
     }
 
     /**
@@ -88,6 +98,9 @@ class ModeleController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $mod = Modele::find($id);
+        $mod ->delete();
+
+        return redirect()->route('gestion_modele.index');
     }
 }

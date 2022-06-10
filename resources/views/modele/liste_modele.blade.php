@@ -5,7 +5,7 @@
 <h1 class="text-center text-primary p-3">LISTE DES MODELES </h1>
 <div class="container">
     <div class="d-flex justify-content-end mb-3 p-3">
-        <a href="{{route('gestion_modele.create') }}" class="btn btn-info"> Ajouter un modele</a>
+        <a href="{{route('gestion_modele.create') }}" class="btn btn-outline-info"> Ajouter un modele</a>
     </div>
     <table class="table shadow p-3 mb-5 bg-body rounded" id="myTable">
         <thead>
@@ -21,16 +21,17 @@
         <tbody>
             @foreach($modeles as $modele)
             <tr>
-                <th scope="row">{{$client->id}}</th>
-                <td>{{$client->nom}}</td>
-                <td>{{$client->photo}}</td>
-                <td>{{$client->detail}}</td>
-                <td>{{$client->modifier}}</td>
-                <td>{{$client->supprimer}}</td>
+                <th scope="row">{{$modele->id}}</th>
+                <td>{{$modele->nom}}</td>
+                <td>{{$modele->photo}}</td>
+                <td>{{$modele->detail}}</td>
+                <td>{{$modele->modifier}}</td>
+                <td>{{$modele->supprimer}}</td>
+
                 <td><img src="{{ asset('image').'/'.$modeles->photo }}" style="width: 25%" alt=""></td>
-                <td> <a class="button" href="{{route('gestion_client.show', [$client->id]) }}"><img src="{{ asset('image/more_info_50px.png') }}" style="width:30px;height:30px" alt=""></a> </td>
-                <td> <a class="button" href="{{route('gestion_client.edit', [$client->id]) }}"><img src="{{ asset('image/pencil_64px.png') }}" style="width:30px;height:30px" alt=""></a> </td>
-                <td><a class="button" href="{{url('supprimer_client/'.$client->id) }}"><img src="{{ asset('image/delete_trash_24px.png') }}" style="width:30px;height:30px" alt=""></a></td>
+                <td> <a class="button" href="{{route('gestion_modele.show', [$modele->id]) }}"><img src="{{ asset('image/more_info_50px.png') }}" style="width:30px;height:30px" alt=""></a> </td>
+                <td> <a class="button" href="{{route('gestion_modele.edit', [$modele->id]) }}"><img src="{{ asset('image/pencil_64px.png') }}" style="width:30px;height:30px" alt=""></a> </td>
+                <td><a class="button" href="{{url('supprimer_modele/'.$modele->id) }}"><img src="{{ asset('image/delete_trash_24px.png') }}" style="width:30px;height:30px" alt=""></a></td>
                 @endforeach
         </tbody>
     </table>
