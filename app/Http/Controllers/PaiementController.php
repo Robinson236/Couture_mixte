@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Client;
+use App\Models\Modele;
 use App\Models\Paiement;
 use Illuminate\Http\Request;
 
@@ -29,6 +30,7 @@ class PaiementController extends Controller
     {
         return view('paiement.formulaire', [
             'clients' => Client::all(),
+            'modeles' => Modele::all()
         ]);
     }
 
@@ -40,8 +42,10 @@ class PaiementController extends Controller
      */
     public function store(Request $request)
     {
+        $reste = $request->somme - $request->avance;
         Paiement::create([
-            'id' => $request->id,
+            'clients_id' => $request->clients_id,
+            'modeles_id' => $request->modeles_id,
             'total' => $request->total,
             'avance' => $request->avance,
             'reste' => $request->reste,

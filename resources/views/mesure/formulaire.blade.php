@@ -18,7 +18,7 @@
                 <div class="row row-cols-2 row-cols-lg-5 g-2 g-lg-3">
                     <div class="col">
                         <label for="exampleInputEmail1" class="form-label">Hauteur poitrine</label>
-                        <input type="number" class="form-control" name="titre" id="exampleInputEmail1"
+                        <input type="number" class="form-control" name="number" id="exampleInputEmail1"
                             aria-describedby="emailHelp">
                     </div>
                     <div class="col">

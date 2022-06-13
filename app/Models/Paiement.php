@@ -14,4 +14,9 @@ class Paiement extends Model
     {
         return $this->belongsTo(Client::class, 'clients_id');
     }
+
+    public function Modele()
+    {
+        return $this->belongsTo(Modele::class, 'modeles_id');
+    }
 }
