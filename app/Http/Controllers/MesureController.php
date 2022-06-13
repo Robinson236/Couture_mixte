@@ -71,7 +71,7 @@ class MesureController extends Controller
      */
     public function show($id)
     {
-        return view('show', [
+        return view('mesure.show', [
             'finds' => Mesure::find($id),
         ]);
     }
@@ -84,7 +84,7 @@ class MesureController extends Controller
      */
     public function edit($id)
     {
-        return view('edit', [
+        return view('mesure.edit', [
             'finds' => Mesure::find($id),
         ]);
     }

@@ -2,9 +2,9 @@
 @section('content')
 
 <h2 class="text-center text-primary p-3">ENREGISTRER UN PAIEMENT</h2>
-<h4 class="text-center p-2">Veuillez remplir ce formulaire SVP!</h4>
+<h4 class="text-center p-2">Veuillez remplire ce formulaire SVP!</h4>
 <div class="container">
-    <div class="col-md-12 mb-3">
+    <div class="col-md-6 mb-3">
         <label for="exampleInputEmail1" class="form-label">Nom du client</label>
         <select  class="form-control" name="clients_id" id="">
             @foreach ($clients as $client)
@@ -32,7 +32,7 @@
             </div>
             <div class="col">
                 <label for="exampleInputEmail1" class="form-label">DATE DU PAIEMENT</label>
-                <input type="number" class="form-control" name="date" id="exampleInputEmail1"
+                <input type="date" class="form-control" name="date" id="exampleInputEmail1"
                     aria-describedby="emailHelp">
             </div>
         </div>

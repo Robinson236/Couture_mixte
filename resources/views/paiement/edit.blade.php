@@ -27,22 +27,6 @@
                 </div>
                 <div>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Detail</label>
-                        <input type="text" class="form-control" name="detail" value="{{ $finds->detail }}"
-                            id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Modifier</label>
-                        <input type="text" class="form-control" name="modifier" value="{{ $finds->modifier }}"
-                            id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Supprimer</label>
-                        <input type="text" class="form-control" name="supprimer" value="{{ $finds->supprimer }}"
-                            id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                <div>
-                    <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">Reste</label>
                         <input type="text" class="form-control" name="reste" value="{{ $finds->reste }}"
                             id="exampleInputEmail1" aria-describedby="emailHelp">

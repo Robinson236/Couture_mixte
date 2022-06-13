@@ -11,6 +11,7 @@
                 <tr>
                     <th scope="col">ID</th>
                     <th scope="col">NOM DU CLIENT</th>
+                    <th scope="col">NOM DU MODELE</th>
                     <th scope="col">TOTAL</th>
                     <th scope="col">AVANCE</th>
                     <th scope="col">RESTE</th>
@@ -24,6 +25,7 @@
                     <tr>
                         <th scope="row">{{ $paiement->id }}</th>
                         <td>{{$mesure->Paiement->nom}}</td>
+                        <td>{{$mesure->Paiement->nom_modele}}</td>
                         <td>{{$mesure->Paiement->total}}</td>
                         <td>{{$mesure->Paiement->avance}}</td>
                         <td>{{$mesure->Paiement->reste}}</td>

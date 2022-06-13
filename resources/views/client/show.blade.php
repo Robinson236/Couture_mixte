@@ -14,9 +14,6 @@
                     <p>Telephone : <strong style="color: red"> {{ $finds->telephone }}</strong></p>
                     <p>Adresse :<strong style="color: red"> {{ $finds->adresse }}</strong></p>
                     <p>Email :<strong style="color: red"> {{ $finds->email }}</strong></p>
-                    <p>Detail :<strong style="color: red"> {{ $finds->detail }}</strong></p>
-                    <p>Modifier : <strong style="color: red"> {{ $finds->modifier }}</strong></p>
-                    <p>Supprimer : <strong style="color: red"> {{ $finds->supprimer }}</strong></p>
                     <a href="{{ route('gestion_client.index') }}" class="btn btn-primary">OK</a>
                 </div>
             </div>

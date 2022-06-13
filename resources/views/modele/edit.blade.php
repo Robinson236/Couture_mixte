@@ -13,9 +13,8 @@
                         <label for="exampleInputEmail1" class="form-label">ID</label>
                         <input type="text" class="form-control" value="{{ $finds->id }}" name="id"
                             id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Nom</label>
+                        <label for="exampleInputEmail1" class="form-label">Nom du modele</label>
                         <input type="text" class="form-control" value="{{ $finds->nom }}" name="nom"
                             id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
@@ -25,28 +24,15 @@
                             id="exampleInputEmail1" aria-describedby="emailHelp">
                     </div>
                 </div>
-                <div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Detail</label>
-                        <input type="text" class="form-control" name="detail" value="{{ $finds->detail }}"
-                            id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Modifier</label>
-                        <input type="text" class="form-control" name="modifier" value="{{ $finds->modifier }}"
-                            id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">Supprimer</label>
-                        <input type="text" class="form-control" name="supprimer" value="{{ $finds->supprimer }}"
-                            id="exampleInputEmail1" aria-describedby="emailHelp">
-                    </div>
-                    <div class="container d-flex">
-                        <div>
-                            <button type="submit" class="btn btn-success w-100">Modifier</button>
-                        </div> &nbsp;&nbsp;&nbsp;
-                    </div>
+                
+                   
         </form>
+    </div>
+</div>
+<div class="container d-flex">
+    <div>
+        <a href="{{ route('gestion_modele.index') }}" class="btn btn-success w-100">Modifier</a>
+        
     </div>
 </div>
     </div>

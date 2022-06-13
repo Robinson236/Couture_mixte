@@ -12,9 +12,6 @@
                     <p>Total : <strong style="color: red"> {{ $finds->total }} </strong></p>
                     <p>Avance : <strong style="color: red"> {{ $finds->avance }}</strong></p>
                     <p>Reste : <strong style="color: red"> {{ $finds->reste }}</strong></p>
-                    <p>Detail :<strong style="color: red"> {{ $finds->detail }}</strong></p>
-                    <p>Modifier : <strong style="color: red"> {{ $finds->modifier }}</strong></p>
-                    <p>Supprimer : <strong style="color: red"> {{ $finds->supprimer }}</strong></p>
                     <a href="{{ route('gestion_paiement.index') }}" class="btn btn-primary">OK</a>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 @extends('layouts.main')
 @section('content')
-    <h1 class="text-center"><strong style="color: black">Détail des mesure {{ $finds->id }}</strong></h1>
+    <h1 class="text-center"><strong style="color: black">Détail des mesure du client {{ $finds->id }}</strong></h1>
     <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
             <div class="col-md-4">
@@ -8,8 +8,7 @@
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title"> Détail du client</h5>
-                    <p>Nom : <strong style="color: red"> {{ $finds->nom }} </strong></p>
+                    <h5 class="card-title"> Détail sur les mesure</h5>
                     <p>Hauteur_poitrine : <strong style="color: red"> {{ $finds->hauteur_poitrine }}</strong></p>
                     <p>Hauteur_pointe_sein :<strong style="color: red"> {{ $finds->hauteur_pointe_sein }}</strong></p>
                     <p>Hauteur_taille_sol:<strong style="color: red"> {{ $finds->hauteur_taille_sol }}</strong></p>
@@ -26,8 +25,6 @@
                     <p>Tour_mollet:<strong style="color: red"> {{ $finds->tour_mollet }}</strong></p>
                     <p>Tour_bassin :<strong style="color: red"> {{ $finds->tour_bassin }}</strong></p>
                     <p>Tour_tour_cheville:<strong style="color: red"> {{ $finds->Tour_cheville }}</strong></p>
-                    <p>Modifier : <strong style="color: red"> {{ $finds->modifier }}</strong></p>
-                    <p>Supprimer : <strong style="color: red"> {{ $finds->supprimer }}</strong></p>
                     <a href="{{ route('gestion_mesure.index') }}" class="btn btn-primary">OK</a>
                 </div>
             </div>

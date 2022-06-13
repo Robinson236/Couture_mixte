@@ -9,11 +9,7 @@
             <div class="col-md-8">
                 <div class="card-body">
                     <h5 class="card-title"> Détail du modele</h5>
-                    <p>Nom : <strong style="color: red"> {{ $finds->nom }} </strong></p>
-                    <p>Photo : <strong style="color: red"> {{ $finds->photo }}</strong></p>
-                    <p>Detail :<strong style="color: red"> {{ $finds->detail }}</strong></p>
-                    <p>Modifier : <strong style="color: red"> {{ $finds->modifier }}</strong></p>
-                    <p>Supprimer : <strong style="color: red"> {{ $finds->supprimer }}</strong></p>
+                    <p>Nom du modele : <strong style="color: red"> {{ $finds->nom }} </strong></p>
                     <a href="{{ route('gestion_modele.index') }}" class="btn btn-primary">OK</a>
                 </div>
             </div>

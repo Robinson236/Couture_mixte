@@ -57,7 +57,7 @@ class PaiementController extends Controller
      */
     public function show($id)
     {
-        return view('show', [
+        return view('paiement.show', [
             'finds' => Paiement::find($id),
         ]);
     }
@@ -70,7 +70,7 @@ class PaiementController extends Controller
      */
     public function edit($id)
     {
-        return view('edit', [
+        return view('paiement.edit', [
             'finds' => Paiement::find($id),
         ]);
     }

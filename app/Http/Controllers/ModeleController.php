@@ -42,9 +42,8 @@ class ModeleController extends Controller
     public function store(Request $request)
     {
         Modele::create([
-            'id' => $request->id,
             'nom' => $request->nom,
-            'photo' => $request->photo,
+            'photo' => $request->photo->store('img_modeles', 'public')
         ]);
         return redirect()->route('gestion_modele.index');
     }
@@ -57,7 +56,7 @@ class ModeleController extends Controller
      */
     public function show($id)
     {
-        return view('show', [
+        return view('modele.show', [
             'finds' => Modele::find($id),
         ]);
     }
@@ -70,7 +69,7 @@ class ModeleController extends Controller
      */
     public function edit($id)
     {
-        return view('edit', [
+        return view('modele.edit', [
             'finds' => Modele::find($id),
         ]);
     }
